@@ -1,0 +1,261 @@
+/* PAGE STYLES */
+.ck.ck-content div.page {
+    counter-reset: heading;
+}
+
+
+/* NORMAL */
+.ck.ck-content p.document-normal {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 1.0;
+
+    text-align: left;
+
+    color: black;
+
+    margin-top: 0pt;
+    margin-bottom: 10pt;
+
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+} 
+
+
+/* DOCUMENT TITLE */
+.ck.ck-content h1.document-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: black;
+
+    margin-top: 24pt;
+    margin-bottom: 0pt;
+}
+
+/* DOCUMENT SUBTITLE */
+.ck.ck-content h2.document-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: black;
+   
+    margin-top: 0pt;
+    margin-bottom: 10pt;
+}
+
+
+
+/* PART HEADINGS*/
+.ck.ck-content p.document-part-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.0;
+
+    text-align: justify;
+    text-transform: uppercase;
+
+    color: black;
+
+    margin-top: 0pt;
+
+    margin-bottom: 10pt;
+
+	counter-reset: section-header;
+}
+
+.ck.ck-content ul {
+	counter-reset: part-header;
+}
+
+.ck.ck-content ul li:before {
+	font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+	line-height: 1.0;
+
+	width: 5rem;
+
+	content: "PART "counter(part-header)" - ";
+	counter-increment: part-header;
+	float: left;
+}
+
+.ck.ck-content ul li {
+	list-style: none;
+	vertical-align: center;
+}
+
+/* SECTION HEADING */
+.ck.ck-content p.document-section-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.0;
+
+    text-align: justify;
+    text-transform: uppercase;
+
+    color: black;
+
+    margin-top: 0pt;
+    margin-bottom: 10pt;
+}
+
+.ck.ck-content ul ul {
+	counter-reset: section-header;
+}
+
+.ck.ck-content ul ul li:before {
+	font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+	line-height: 1.0;
+
+	margin-left: -2.5rem;
+	width: 5rem;
+
+	content: counter(part-header) "." counter(section-header);
+	counter-increment: section-header;
+	float: left;
+}
+
+.ck.ck-content ul ul li {
+	list-style: none;
+	vertical-align: center;
+}
+
+/* SUBSECTION */
+.ck.ck-content p.document-subsection {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+	font-weight: normal;
+    line-height: 1.0;
+
+    text-align: left;
+
+    color: black;
+
+    margin-top: 0pt;
+    margin-bottom: 10pt;
+}
+
+.ck.ck-content ul ul ul {
+	counter-reset: subsection;
+}
+
+.ck.ck-content ul ul ul li:before {
+	font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+	font-weight: normal;
+	line-height: 1.0;
+
+	margin-left: -5rem;
+	width: 2.5rem;
+
+	content: counter(subsection, upper-alpha) ".";
+	counter-increment: subsection;
+	float: left;
+}
+
+.ck.ck-content ul ul ul li {	
+	list-style: none;
+	vertical-align: center;
+}
+
+/* SUBSECTION LIST */
+.ck.ck-content p.document-subsection-list {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+	font-weight: normal;
+    line-height: 1.0;
+
+    text-align: left;
+
+    color: black;
+
+    margin-top: 0pt;
+    margin-bottom: 10pt;
+}
+
+.ck.ck-content ul ul ul ul {
+	counter-reset: subsection-list;
+}
+
+.ck.ck-content ul ul ul ul li:before {
+	font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+	font-weight: normal;
+	line-height: 1.0;
+
+	margin-left: -2.5rem;
+	width: 2.5rem;
+
+	content: counter(subsection-list) ".";
+	counter-increment: subsection-list;
+	float: left;
+}
+
+.ck.ck-content ul ul ul ul li {	
+	list-style: none;
+	vertical-align: center;
+}
+
+
+/* SUBSECTION LIST DETAILS*/
+.ck.ck-content p.document-subsection-list-details {
+    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+	font-weight: normal;
+    line-height: 1.0;
+
+    text-align: left;
+
+    color: black;
+
+    margin-top: 0pt;
+    margin-bottom: 10pt;
+}
+
+.ck.ck-content ul ul ul ul ul {
+	counter-reset: subsection-list-details;
+}
+
+.ck.ck-content ul ul ul ul ul li:before {
+	font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+	font-weight: normal;
+	line-height: 1.0;
+
+	margin-left: -2.5rem;
+	width: 2.5rem;
+
+	content: counter(subsection-list-details, lower-alpha) ".";
+	counter-increment: subsection-list-details;
+	float: left;
+}
+
+.ck.ck-content ul ul ul ul ul li {	
+	list-style: none;
+	vertical-align: center;
+}
+
+
+
+/* .ck.ck-content ol ol { list-style-type: upper-alpha;}
+.ck.ck-content ol ol ol {list-style-type: upper-roman;}
+.ck.ck-content ol ol ol ol {list-style-type: lower-alpha;}
+.ck.ck-content ol ol ol ol ol {list-style-type: lower-roman;}
+.ck.ck-content ol ol ol ol ol ol {list-style-type: lower-greek;} */
